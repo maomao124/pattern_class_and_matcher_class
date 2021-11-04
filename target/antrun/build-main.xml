@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <echo message="*******************install-or-package*******************"/>
+  <mkdir dir="H:\程序\大三上期\Pattern类和Matcher类/target/classes"/>
+  <copy todir="H:\程序\大三上期\Pattern类和Matcher类\target/classes" overwrite="true">
+    <fileset dir="H:\程序\大三上期\Pattern类和Matcher类\target" erroronmissingdir="false">
+      <include name="*.jar"/>
+    </fileset>
+  </copy>
+  <move file="H:\程序\大三上期\Pattern类和Matcher类\target/classes/Pattern类和Matcher类.jar" tofile="H:\程序\大三上期\Pattern类和Matcher类\target/Pattern类和Matcher类_hide.jar"/>
+  <copy todir="H:\程序\大三上期\Pattern类和Matcher类\target/classes" overwrite="true">
+    <fileset dir="H:\程序\大三上期\Pattern类和Matcher类\target" erroronmissingdir="false">
+      <include name="*.jar"/>
+    </fileset>
+  </copy>
+  <move file="H:\程序\大三上期\Pattern类和Matcher类\target/classes/Pattern类和Matcher类.jar" tofile="H:\程序\大三上期\Pattern类和Matcher类\target/Pattern类和Matcher类_args.jar"/>
+  <move file="H:\程序\大三上期\Pattern类和Matcher类\target/classes/Pattern类和Matcher类_hide.jar" tofile="H:\程序\大三上期\Pattern类和Matcher类\target/Pattern类和Matcher类_args_save.jar"/>
+  <copy todir="H:/jar包/" overwrite="true">
+    <fileset dir="H:\程序\大三上期\Pattern类和Matcher类\target" erroronmissingdir="false">
+      <include name="*.jar"/>
+    </fileset>
+  </copy>
+</target>
+</project>
